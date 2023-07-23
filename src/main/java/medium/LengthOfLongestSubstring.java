@@ -1,8 +1,7 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
+import java.util.stream.Collectors;
 
 public class LengthOfLongestSubstring {
 
@@ -11,11 +10,15 @@ public class LengthOfLongestSubstring {
     public static void main(String[] args) {
         initializeExampleStrings();
 
+        System.out.println("Result of longest substring length: ");
         for(String string: stringList){
             System.out.println(lengthOfLongestSubstring(string));
         }
 
-        //TODO:New problem. What if we've have to return substrings also. What we've have to do?
+        System.out.println("Result of longest substring: ");
+        for(String string: stringList){
+            System.out.println(resultOfLongestSubstring(string));
+        }
 
     }
 
@@ -50,8 +53,33 @@ public class LengthOfLongestSubstring {
         return max;
     }
 
+    //It's useless, but I like the way of converting Strings to Set of Characters.
+    private static Set<Character> setOfLongestSubstring(String s){
+        Set<Character> charsSet = s.chars()
+                .mapToObj(e->(char)e).collect(Collectors.toSet());
+
+        return charsSet;
+    }
+
     private static String resultOfLongestSubstring(String s){
-        return "";
+        String subString = "";
+        List<String> resultList = new ArrayList<>();
+        int beginIndex = 0;
+
+        for(int i=0;i<s.length();i++){
+
+            if(subString.contains(s.substring(i,i+1))){
+                resultList.add(subString);
+                subString = s.substring(i,i+1);
+                beginIndex=i;
+                continue;
+               }
+
+            subString =s.substring(beginIndex,i+1);
+        }
+
+        return resultList.stream().
+                max(Comparator.comparingInt(String::length)).get();
     }
 
 }
