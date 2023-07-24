@@ -29,6 +29,10 @@ public class LongestPalindromeSubstring {
         int outerIndex=0;
 
         while(beginIndex<charList.size()){
+            if(charList.stream().collect(Collectors.toSet()).size()==1){
+                palindromicList.add(s);
+                break;
+            }
             if(charList.get(i) == charList.get(beginIndex)){
                 palindromicList.add(s.substring(beginIndex,i+1));
                 beginIndex=i;
@@ -48,9 +52,11 @@ public class LongestPalindromeSubstring {
     private static void initializeExampleStrings(){
         String s1 = "babad";
         String s2 = "cbbd";
+        String s3 = "ccc";
 
         stringList.add(s1);
         stringList.add(s2);
+        stringList.add(s3);
     }
 
 }
