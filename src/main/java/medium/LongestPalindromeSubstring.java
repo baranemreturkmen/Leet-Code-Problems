@@ -9,23 +9,32 @@ import java.util.stream.Collectors;
 public class LongestPalindromeSubstring {
 
     static List<String> stringList = new ArrayList<>();
-
-    //TODO: Measure 2 methods execution time. Is second approach implements better performance?
+    private static final long NANO_TO_SECONDS_CONSTANT = 1_000_000_000;
 
     public static void main(String[] args) {
         initializeExampleStrings();
+        long startTime;
+        long endTime;
 
         System.out.println("Result of longest palindrome substring: ");
+        startTime = System.nanoTime();
         for(String string: stringList){
             System.out.println(resultOfLongestPalindrome(string));
         }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for first approach is: "+(endTime-startTime)/NANO_TO_SECONDS_CONSTANT+" seconds");
+        //Nearly 3 seconds
 
         System.out.println("---------------------");
 
         System.out.println("Result of longest palindrome substring with better performance: ");
+        startTime = System.nanoTime();
         for(String string: stringList){
             System.out.println(resultOfLongestPalindromeWithBetterPerformance(string));
         }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for second approach is: "+(endTime-startTime)/NANO_TO_SECONDS_CONSTANT+" seconds");
+        //Too close to 0 second.
     }
 
     private static String resultOfLongestPalindrome(String s){
