@@ -8,12 +8,37 @@ import java.util.stream.Collectors;
 public class ReverseInteger {
 
     static List<Integer> integerList = new ArrayList<>();
+    private static final long NANO_TO_MILLISECONDS_CONSTANT = 1_000_000;
 
     public static void main(String[] args) {
         initializeInts();
+        long startTime;
+        long endTime;
+
+        System.out.println("Result of reverse integer: ");
+        startTime = System.nanoTime();
         for(int intElement: integerList){
             System.out.println(resultOfReverseInteger(intElement));
         }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for first approach is: "+(endTime-startTime)/NANO_TO_MILLISECONDS_CONSTANT+" milliseconds");
+        //Nearly 2 milliseconds.
+
+        System.out.println("-------------------------------------");
+
+        System.out.println("Result of reverse integer without Character list: ");
+        startTime = System.nanoTime();
+        for(int intElement: integerList){
+            System.out.println(resultOfReverseIntegerWithoutCharacterList(intElement));
+        }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for second approach is: "+(endTime-startTime)/NANO_TO_MILLISECONDS_CONSTANT+" milliseconds");
+        //Nearly 5 milliseconds.
+
+        /*Whoops! I was wrong! Working with Character of list offers better solution than String charAt.
+        * Why?
+        * That's the explanation:
+        * https://stackoverflow.com/questions/51896947/opertion-performance-between-arraylist-or-single-string*/
     }
 
     private static List<Integer> initializeInts(){
@@ -31,7 +56,6 @@ public class ReverseInteger {
         return integerList;
     }
 
-    //TODO: Solve the problem without Character of list for better performance.
     private static int resultOfReverseInteger(int x){
         if(x == 0){
             return x;
@@ -57,6 +81,40 @@ public class ReverseInteger {
         }
         try{
             x = Integer.valueOf(strx);
+        }
+        catch (NumberFormatException numberFormatException){
+            return 0;//If reverse of the integer out of 2^32 or -2^32 we should return 0.
+        }
+
+        if(control){
+            x = x*-1;
+        }
+        return x;
+    }
+
+    private static int resultOfReverseIntegerWithoutCharacterList(int x){
+        if(x == 0){
+            return x;
+        }
+        Integer wraperx =x;
+        String strx = wraperx.toString();
+
+        boolean control = false;
+        if(strx.charAt(0) == '-'){
+            strx = strx.substring(1);
+            control = true;
+        }
+
+        String strxNew = "";
+        for(int i= strx.length()-1;i>=0;i--){
+            if(strx.charAt(i) == -1 && i== strx.length()-1){
+                strx = strx.substring(0,strx.length()-1);
+                continue;
+            }
+            strxNew = strxNew + strx.charAt(i);
+        }
+        try{
+            x = Integer.valueOf(strxNew);
         }
         catch (NumberFormatException numberFormatException){
             return 0;//If reverse of the integer out of 2^32 or -2^32 we should return 0.
