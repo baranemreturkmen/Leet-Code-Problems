@@ -9,6 +9,10 @@ This repository shows solutions about some Leet Code algorithm problems.
 
 <img width="705" alt="Ekran Resmi 2023-07-24 14 07 35" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/cf286aa8-ecdc-4bf6-a720-221875c11569">
 
-3-) Zigzag Conversion
+3-)Zigzag Conversion
 
 <img width="466" alt="Ekran Resmi 2023-07-27 15 41 19" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/54045369-be60-4431-8970-d57381280eac">
+
+4-)Reverse Integer
+
+![](../../Ekran Resmi 2023-08-10 12.39.54.png)
