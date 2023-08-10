@@ -15,4 +15,4 @@ This repository shows solutions about some Leet Code algorithm problems.
 
 4-)Reverse Integer
 
-![](../../Ekran Resmi 2023-08-10 12.39.54.png)
+<img width="460" alt="Ekran Resmi 2023-08-10 12 39 54" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/a4b72f79-0b1d-4e08-b708-ca9ffe5523d3">
