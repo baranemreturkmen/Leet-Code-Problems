@@ -36,3 +36,5 @@ This repository shows solutions about some Leet Code algorithm problems.
 <img width="641" alt="Ekran Resmi 2023-08-13 16 54 22" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/1a989a29-0eb8-486d-a6a2-3934e76e1bc2">
 
 <img width="653" alt="Ekran Resmi 2023-08-13 16 54 39" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/8f724a5a-7d99-466f-bdbd-667112b57173">
+
+<img width="637" alt="Ekran Resmi 2023-08-13 16 54 07" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/bdcbf724-3e60-4d1c-8ea8-fa459177e41c">
