@@ -1,4 +1,4 @@
-<img width="637" alt="Ekran Resmi 2023-08-13 16 54 07" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/bdcbf724-3e60-4d1c-8ea8-fa459177e41c"># Leet-Code-Problems
+# Leet-Code-Problems
 This repository shows solutions about some Leet Code algorithm problems.
 
 1-)Length Of Longest Substring
