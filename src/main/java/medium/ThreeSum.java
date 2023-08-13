@@ -4,16 +4,16 @@ import java.util.*;
 
 public class ThreeSum {
 
-    static List<int[]> integerArrayList = new ArrayList<>();
+    static List<int[]> integerArraysList = new ArrayList<>();
 
     public static void main(String[] args) {
-        initializeIntegerList();
+        initializeIntegerArraysList();
         long startTime;
         long endTime;
 
         System.out.println("Result of three sum: ");
         startTime = System.nanoTime();
-        for (int[] intArrayValue: integerArrayList){
+        for (int[] intArrayValue: integerArraysList){
             System.out.println(calculateThreeSum(intArrayValue));
             System.out.println("--------------------------");
         }
@@ -23,7 +23,7 @@ public class ThreeSum {
 
         System.out.println("Result of three sum with set: ");
         startTime = System.nanoTime();
-        for (int[] intArrayValue: integerArrayList){
+        for (int[] intArrayValue: integerArraysList){
             System.out.println(calculateThreeSumWithSet(intArrayValue));
             System.out.println("--------------------------");
         }
@@ -100,14 +100,14 @@ public class ThreeSum {
         return new ArrayList<>(res);
     }
 
-    private static void initializeIntegerList(){
+    private static void initializeIntegerArraysList(){
         int[] intArray = {-1,0,1,2,-1,-4};
         int[] intArray2 = {0,1,1};
         int[] intArray3 = {0,0,0};
 
-        integerArrayList.add(intArray);
-        integerArrayList.add(intArray2);
-        integerArrayList.add(intArray3);
+        integerArraysList.add(intArray);
+        integerArraysList.add(intArray2);
+        integerArraysList.add(intArray3);
     }
 
 }
