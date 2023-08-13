@@ -1,8 +1,6 @@
 package medium;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
+import java.util.*;
 
 public class ThreeSum {
 
@@ -10,10 +8,31 @@ public class ThreeSum {
 
     public static void main(String[] args) {
         initializeIntegerList();
+        long startTime;
+        long endTime;
+
+        System.out.println("Result of three sum: ");
+        startTime = System.nanoTime();
         for (int[] intArrayValue: integerArrayList){
             System.out.println(calculateThreeSum(intArrayValue));
             System.out.println("--------------------------");
         }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for first approach is: "+(endTime-startTime)+" nano seconds");
+        //1001458 nano seconds
+
+        System.out.println("Result of three sum with set: ");
+        startTime = System.nanoTime();
+        for (int[] intArrayValue: integerArrayList){
+            System.out.println(calculateThreeSumWithSet(intArrayValue));
+            System.out.println("--------------------------");
+        }
+        endTime = System.nanoTime();
+        System.out.println("Calculated approximate time for second approach is: "+(endTime-startTime)+" nano seconds");
+        //257500 nano seconds
+
+        //Second approache is approximately 4 times better than first approache.
+
     }
 
     private static List<List<Integer>> calculateThreeSum(int[] nums){
@@ -61,6 +80,24 @@ public class ThreeSum {
             }
         }
         return ans;
+    }
+
+    private static List<List<Integer>> calculateThreeSumWithSet(int[] nums){
+        Set<List<Integer>> res  = new HashSet<>();
+        if(nums.length==0) return new ArrayList<>(res);
+        Arrays.sort(nums);
+        for(int i=0; i<nums.length-2;i++){
+            int j =i+1;
+            int  k = nums.length-1;
+            while(j<k){
+                int sum = nums[i]+nums[j]+nums[k];
+                if(sum==0)res.add(Arrays.asList(nums[i],nums[j++],nums[k--]));
+                else if (sum >0) k--;
+                else if (sum<0) j++;
+            }
+
+        }
+        return new ArrayList<>(res);
     }
 
     private static void initializeIntegerList(){
