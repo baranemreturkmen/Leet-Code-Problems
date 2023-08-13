@@ -22,3 +22,12 @@ This repository shows solutions about some Leet Code algorithm problems.
 <img width="651" alt="Ekran Resmi 2023-08-13 15 28 32" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/547c2f4a-ff00-4311-aed6-ba61a58d4527">
 
 <img width="643" alt="Ekran Resmi 2023-08-13 15 29 04" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/82ae238a-b6fb-4547-b172-e714e364058c">
+
+6-)Three Sum
+
+<img width="642" alt="Ekran Resmi 2023-08-13 16 12 07" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/392ebac4-f6a5-4ff5-b54e-ca4fa5b8df84">
+
+<img width="642" alt="Ekran Resmi 2023-08-13 16 12 31" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/4e775905-aef9-4fa5-98eb-6bccd028ec8b">
+
+
+
