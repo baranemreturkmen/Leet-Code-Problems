@@ -16,3 +16,9 @@ This repository shows solutions about some Leet Code algorithm problems.
 4-)Reverse Integer
 
 <img width="460" alt="Ekran Resmi 2023-08-10 12 39 54" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/a4b72f79-0b1d-4e08-b708-ca9ffe5523d3">
+
+5-)Integer to Roman
+
+<img width="651" alt="Ekran Resmi 2023-08-13 15 28 32" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/547c2f4a-ff00-4311-aed6-ba61a58d4527">
+
+<img width="643" alt="Ekran Resmi 2023-08-13 15 29 04" src="https://github.com/baranemreturkmen/Leet-Code-Problems/assets/43263983/82ae238a-b6fb-4547-b172-e714e364058c">
